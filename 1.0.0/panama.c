@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
 	}
 
 	// Determine where to output and where to get our input
-	FILE *input = (frompipe && infile[0] == '\0') ? stdin : fopen(infile, "r");
+	FILE *input = (frompipe || infile[0] == '\0') ? stdin : fopen(infile, "r");
 	if(input == nullptr) { perror(programname); exit(EXIT_FAILURE); }
 
 	// Print out verbose information if we request it
