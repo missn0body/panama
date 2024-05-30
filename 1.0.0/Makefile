@@ -5,6 +5,8 @@ RM = rm
 LINT = cppcheck
 LINTFLAGS = --check-level=exhaustive --enable=all --inconclusive --suppress=missingIncludeSystem --verbose
 
+DDIR = doc
+
 BIN = panama
 
 .PHONY: all clean lint dist self
@@ -26,7 +28,7 @@ dist: clean
 dist: all
 dist: $(DDIR)/$(BIN).7
 	gzip -vk $<
-	tar -czvf $(BIN)-$(VERSION).tar.gz $(BIN) $(DDIR)/*../README.md ../LICENSE --transform 's,^,$(BIN)-$(VERSION)/,'
+	tar -czvf $(BIN)-$(VERSION).tar.gz $(BIN) $(DDIR)/* ../README.md ../LICENSE --transform 's,^,$(BIN)-$(VERSION)/,'
 	md5sum $(BIN)-$(VERSION).tar.gz
 
 self: clean
