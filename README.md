@@ -15,5 +15,12 @@ discussed at my E-Mail, <thesearethethingswesaw@gmail.com>
 
 ### v.1.0.0
 
-(May 2024)
+(May 2024)  
 A simple palindrome checker.
+
+### v.1.0.1
+
+(June 2024)  
+A simple palindrome checker.
+* Edited default behavior
+* `--quiet` flag added
