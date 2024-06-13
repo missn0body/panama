@@ -1,0 +1,34 @@
+.TH panama 7 "June 2024" "Version 1.0.1"
+.SH NAME
+panama \- A woman, a program, some canal, palindrome checker!
+.SH SYNOPSIS
+.B panama
+.B [-vq]
+.I <input file>
+.PP
+.B command-to-stdout | panama
+.B [-vq]
+.SH DESCRIPTION
+.B panama
+may or may not be a country or a canal in Central America, but for all intents and purposes it
+is a program to verify either the contents of a file or stdin entirely consists of palindromes,
+and will list all the lines that are, in fact, palindromes when working on files.
+The program can also print verbose information on what specific lines are not palindromes, which
+may result in overly excess information to stdout with larger files.
+.PP
+.B panama
+will not modify the input file in any way.
+.PP
+.B panama
+is invokable through the terminal.
+.SH OPTIONS
+.IP "-v, --verbose"
+Signals
+.B panama
+to output diagnostic and verbose information
+.IP "-q, --quiet"
+Only reports if a file does not consist entirely of palindromes, no other output
+.SH BUGS
+No known bugs.
+.SH AUTHORS
+Written by anson <thesearethethingswesaw@gmail.com>
